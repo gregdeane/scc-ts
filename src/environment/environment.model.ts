@@ -17,6 +17,6 @@ export interface IScEnvironments {
 
 export interface IScEnvironmentsProvider {
   getCurrentEnvironment(): IScEnvironment;
-  getSpecificEnvironment(name: string): IScEnvironment;
+  getSpecificEnvironment(name?: string): IScEnvironment;
   setCurrentEnvironment(env: string|IScEnvironment): IScEnvironment;
 }

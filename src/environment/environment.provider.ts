@@ -12,7 +12,7 @@ class ScEnvironmentService implements IServiceProvider {
     this.localEnvironment = ENVIRONMENTS['LOCAL'];
   }
 
-  private getCustomEnvironment(env: IScEnvironment): IScEnvironment {
+  private getCustomEnvironment(env?: IScEnvironment): IScEnvironment {
     let name = (env && env.NAME) || '';
     let dollar = name.indexOf('$') === -1;
     let custom = name.length && dollar && env;
@@ -29,7 +29,7 @@ class ScEnvironmentService implements IServiceProvider {
     return this.environment || this.defaultEnvironment;
   }
 
-  private getSpecificEnvironment(name: string): IScEnvironment {
+  private getSpecificEnvironment(name?: string): IScEnvironment {
     return (name && this.getNamedEnvironment(name)) || this.defaultEnvironment;
   }
 
