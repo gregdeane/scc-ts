@@ -3,9 +3,9 @@ import { IScEnvironment, IScEnvironmentsProvider } from './environment.model';
 import { ENVIRONMENTS, DEFAULT_ENVIRONMENT } from './environment.constant';
 
 class ScEnvironmentService implements IServiceProvider {
-  defaultEnvironment: IScEnvironment;
-  localEnvironment: IScEnvironment;
-  environment: IScEnvironment;
+  private defaultEnvironment: IScEnvironment;
+  private localEnvironment: IScEnvironment;
+  private environment: IScEnvironment;
 
   constructor() {
     this.defaultEnvironment = ENVIRONMENTS[DEFAULT_ENVIRONMENT];
