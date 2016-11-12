@@ -10,7 +10,7 @@ export default {
     filename: 'test.js'
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.js']
   },
   module: {
     loaders: loaders,
@@ -28,11 +28,7 @@ export default {
           sourceMap: false,
           inlineSourceMap: true,
           compilerOptions: {
-
-            // Remove TypeScript helpers to be injected
-            // below by DefinePlugin
             removeComments: true
-
           }
         },
         exclude: [/\.e2e\.ts$/]
