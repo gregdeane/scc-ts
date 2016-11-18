@@ -34,7 +34,7 @@ class ScEnvironments implements IServiceProvider {
   }
 
   private setCurrentEnvironment(env: string|IScEnvironment): IScEnvironment {
-    this.environment = (typeof env === 'string' && this.getNamedEnvironment(env)) || this.getCustomEnvironment(env);
+    this.environment = (typeof env === 'string' && this.getNamedEnvironment(env)) || this.getCustomEnvironment(<IScEnvironment>env);
     return this.environment;
   }
 
