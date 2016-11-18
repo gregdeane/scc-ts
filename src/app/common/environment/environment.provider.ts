@@ -40,9 +40,15 @@ class ScEnvironmentService implements IServiceProvider {
 
   $get(): IScEnvironmentsProvider {
     return {
-      getCurrentEnvironment: () => this.getCurrentEnvironment(),
-      getSpecificEnvironment: (name: string) => this.getSpecificEnvironment(name),
-      setCurrentEnvironment: (env: string|IScEnvironment) => this.setCurrentEnvironment(env)
+      getCurrentEnvironment: (): IScEnvironment => {
+        return this.getCurrentEnvironment();
+      },
+      getSpecificEnvironment: (name: string): IScEnvironment => {
+        return this.getSpecificEnvironment(name);
+      },
+      setCurrentEnvironment: (env: string|IScEnvironment): IScEnvironment => {
+        return this.setCurrentEnvironment(env);
+      }
     };
   }
 }
