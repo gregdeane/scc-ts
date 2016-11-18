@@ -1,7 +1,7 @@
 import { IScEnvironment } from './environment.model';
 import { ENVIRONMENTS, DEFAULT_ENVIRONMENT } from './environment.constant';
 
-describe('Constants', () => {
+describe('environment constants', () => {
   let mock: any;
 
   beforeEach(setup);
