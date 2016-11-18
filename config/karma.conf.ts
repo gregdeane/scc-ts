@@ -1,7 +1,8 @@
 import webpackConfig from './webpack.test';
 
+const shim = './karma.shim.ts';
+
 export = (config: any): void => {
-  const shim = './karma.shim.ts';
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
@@ -16,6 +17,13 @@ export = (config: any): void => {
       module: webpackConfig.module,
       resolve: webpackConfig.resolve,
       devtool: 'inline-source-map'
+    },
+    // quiet down the console
+    // https://github.com/webpack/webpack/issues/1191#issuecomment-228602750
+    webpackMiddleware: {
+      stats: {
+        chunks: false
+      }
     },
     coverageReporter: {
       type: 'in-memory'

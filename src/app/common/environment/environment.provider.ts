@@ -46,3 +46,5 @@ class ScEnvironmentService implements IServiceProvider {
     };
   }
 }
+
+export default ScEnvironmentService;

@@ -2,7 +2,7 @@ export interface IScEnvironment {
   NAME: string;
   URL: string;
   DOMAIN: string;
-  PORT?: string;
+  PORT?: number|string;
   USER_SERVICE?: string;
   TOKEN_SERVICE?: string;
   MERCHANT_SERVICE?: string;

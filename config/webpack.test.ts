@@ -1,7 +1,11 @@
+import * as webpack from 'webpack';
 import loaders from './loaders/loaders.common';
 import paths from './paths';
+import getClientEnvironment from './environment';
 
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
+
+let env = getClientEnvironment();
 
 export default {
   entry: [paths.rootModule],
@@ -47,6 +51,7 @@ export default {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin(env),
     new LoaderOptionsPlugin({
       debug: true,
       options: {

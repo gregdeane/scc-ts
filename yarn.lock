@@ -12,6 +12,10 @@
   dependencies:
     "@types/jquery" "*"
 
+"@types/bluebird@*":
+  version "3.0.35"
+  resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.0.35.tgz#e6e2d375a7b7a0a22f155ce74eb28d0da303740c"
+
 "@types/chalk@^0.4.31":
   version "0.4.31"
   resolved "https://registry.yarnpkg.com/@types/chalk/-/chalk-0.4.31.tgz#a31d74241a6b1edbb973cf36d97a2896834a51f9"
@@ -22,6 +26,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/express@*":
+  version "4.0.34"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.34.tgz#cdc0afd69d70d2295b81b3aa47f26f672afcde1c"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/serve-static" "*"
+
 "@types/jasmine@^2.5.37":
   version "2.5.37"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.37.tgz#15f16040b1106941ec4aeefa3cd9c55342a0dcbb"
@@ -29,6 +40,20 @@
 "@types/jquery@*":
   version "2.0.34"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.34.tgz#27615b369f30e572336126514e74672dda6e3d04"
+
+"@types/karma":
+  version "0.13.33"
+  resolved "https://registry.yarnpkg.com/@types/karma/-/karma-0.13.33.tgz#3835d3d94e884b6de8884a3e70a6f5690e6a5850"
+  dependencies:
+    "@types/bluebird" "*"
+    "@types/log4js" "*"
+    "@types/node" "*"
+
+"@types/log4js@*":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@types/log4js/-/log4js-0.0.32.tgz#c15621cfa96f92ec6b0cfb49096bdd23cd893c7c"
+  dependencies:
+    "@types/express" "*"
 
 "@types/mime@*":
   version "0.0.29"
