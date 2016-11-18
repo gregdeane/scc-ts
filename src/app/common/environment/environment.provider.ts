@@ -2,7 +2,7 @@ import { IServiceProvider } from 'angular';
 import { IScEnvironment, IScEnvironmentsProvider } from './environment.model';
 import { ENVIRONMENTS, DEFAULT_ENVIRONMENT } from './environment.constant';
 
-class ScEnvironmentService implements IServiceProvider {
+class ScEnvironments implements IServiceProvider {
   private defaultEnvironment: IScEnvironment;
   private localEnvironment: IScEnvironment;
   private environment: IScEnvironment;
@@ -53,4 +53,4 @@ class ScEnvironmentService implements IServiceProvider {
   }
 }
 
-export default ScEnvironmentService;
+export default ScEnvironments;
