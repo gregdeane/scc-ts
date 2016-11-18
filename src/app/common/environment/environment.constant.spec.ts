@@ -8,13 +8,13 @@ describe('Constants', () => {
 
   it('should contain the correct number of environments', () => {
     let names = Object.keys(ENVIRONMENTS);
-    expect(names.length).toEqual(mock.environment.names.length, `ENVIRONMENTS constant does not contain the correct number of environments`);
+    expect(names.length).toEqual(mock.environment.names.length, `ENVIRONMENTS does not contain the correct number of environments`);
   });
 
-  it('should contain a named object for each environment', () => {
+  it('should contain a correctly named object for each environment', () => {
     mock.environment.names.forEach((name: string) => {
       let env: IScEnvironment = ENVIRONMENTS[name];
-      expect(env).toEqual(jasmine.any(Object));
+      expect(env).toEqual(jasmine.any(Object), `${env.NAME} is not of type Object`);
       expect(env.NAME).toBe(name, `env.NAME: ${env.NAME} did not match name: ${name}`);
     });
   });
@@ -33,6 +33,10 @@ describe('Constants', () => {
         expect(env[prop]).toBeDefined(`${name} => ${prop} was not defined`);
       });
     });
+  });
+
+  it('should contain a default environment name', () => {
+    expect(DEFAULT_ENVIRONMENT).toEqual(jasmine.any(String));
   });
 
   /////////////////////////////
