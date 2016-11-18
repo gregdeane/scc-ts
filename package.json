@@ -5,7 +5,8 @@
     "rimraf": "rimraf",
     "start": "ts-node tools/start",
     "pretest": "npm run rimraf -- coverage",
-    "test": "ts-node tools/test"
+    "test": "ts-node tools/test -- $tdd",
+    "test:tdd": "npm test tdd"
   },
   "dependencies": {
     "angular": "^1.5.8"
