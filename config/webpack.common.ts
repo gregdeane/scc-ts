@@ -5,6 +5,6 @@ export default {
     extensions: ['.ts', '.js']
   },
   module: {
-    rules: loaders
+    loaders: loaders
   }
 };
